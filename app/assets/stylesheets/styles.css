@@ -1,0 +1,121 @@
+h1 {
+    font-size: 60px;
+    margin-top: 60px;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    background-color: #143584;
+    padding: 20px;
+    color:aliceblue;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+.photo1 {
+    max-width: 90%;
+    height: auto;
+    outline: 4px solid #143584;
+}
+
+.text1 {
+    justify-content: flex-start;
+    font-size: 25px;
+    line-height: 1.5;
+    background-color: hsla(0, 0%, 100%, 0.592);
+    padding: 10px;
+    padding-left: 20px;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    line-height: 2;
+}
+
+.body1{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    color:#000080;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    
+}
+
+.point{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.point_title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: #143584;
+}
+
+.body2{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    line-height: 1.5;
+}
+
+.pay{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+.donate-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #143584; /* dark gray */
+  color: #e5e7eb; /* light gray text */
+  font-size: 0.9rem;
+  font-size: 25px;
+}
+
+.donate-footer .donate-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 18px;
+  background: #22d3ee; /* cyan */
+  color: #0f172a; /* dark text */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.donate-footer .donate-btn:hover {
+  background: #0ea5e9; /* darker cyan */
+}
+
+.lang-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  background-color: #22d3ee;
+  color: #0f172a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.donate{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 12px;
+  background-color: #22d3ee;
+  color: #0f172a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}

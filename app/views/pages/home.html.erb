@@ -1,0 +1,236 @@
+<header>
+  <button id="langBtn" class="lang-toggle">Español</button>
+  <a href="#donate-footer" class="donate">Donate</a>
+  <h1>The Change We Want To See</h1>
+</header>
+
+<div class="body1">
+  <%= image_tag "photo1.png", class: "photo1" %>
+  <div class="text1">
+    <div><strong>About Kevin:</strong><br>
+      Moved to Memphis at the age of 8, Memphis has become his hometown.<br>
+      Growing up in the Douglass Neighborhood, Kevin saw firsthand the struggles of many Memphis citizens.<br>
+      After graduating from Douglass High School, Kevin went to the University of Memphis, where he graduated
+      with a Bachelor of Arts in Criminal Justice.
+    </div>
+    <div>
+      With this degree and his long experience with the poverty surrounding his neighborhood, Kevin understood
+      that Memphis needed POVERTY ERADICATION. He has now made it his mission to help the city that gave him so
+      much. Although young he knows the importance of the Memphis culture while maintaining the need to protect
+      the city's citizens.
+    </div>
+  </div>
+</div>
+
+<div class="body2">
+  <div class="about">
+    <div class="point">
+      <div class="point_title">Education</div>
+      <ul>
+        <li>Provide the proper funding to have buildings up to date.</li>
+        <li>Make it a priority to listen to the voices of principals and teachers who can speak on the needs of students.</li>
+        <li>EQUAL OPPORTUNITY FOR ALL. Students should have the same opportunities as others to ensure everyone has a fair chance to succeed.</li>
+        <li>Partner up with businesses to hire high school and college graduates.</li>
+      </ul>
+    </div>
+
+    <div class="point">
+      <div class="point_title">Taxes</div>
+      <ul>
+        <li>It is a goal to lower property taxes for local business as they are the backbone of the city.</li>
+        <li>Increase property taxes on big corporations that have received tax breaks.</li>
+        <li>Lower the taxes on license plates and renewals.</li>
+        <li>Ensure property value is considerate of expenses on houses.</li>
+      </ul>
+    </div>
+
+    <div class="point">
+      <div class="point_title">Health</div>
+      <ul>
+        <li>Provide easy access to health care and urgent care through transportation.</li>
+        <li>Ensure everyone has an opportunity to receive urgent care without making it high cost.</li>
+        <li>Have monthly free clinic check ups at community centers for community residents.</li>
+      </ul>
+    </div>
+
+    <div class="point">
+      <div class="point_title">Safety</div>
+      <ul>
+        <li>Move police to a community based policing. Officers should be respected, not feared.</li>
+        <li>Officers should receive proper training to help its citizens.</li>
+        <li>Provide proper funding to jails to ensure they run smoothly.</li>
+        <li>Ensure the safety of immigrants that have helped this city out. We must target crime, not the innocents.</li>
+      </ul>
+    </div>
+  </div>
+
+  <%= image_tag "photo2.png", class: "photo2" %>
+</div>
+
+<footer class="donate-footer" id="donate-footer">
+  <p>Do these points align with yours? Consider supporting my work!</p>
+  <a href="https://forms.gle/7GutQ6i7VLvvASJf8" target="_blank" class="donate-btn" id="donate-btn">Donate</a>
+  <small>Every little bit helps keep this project alive. Thank you!</small>
+
+  <a href="https://forms.gle/Wc3p7STRvWY2K3FK6" target="_blank" class="donate-btn" id="register-btn">Register</a>
+  <small id="register-msg">Would you like to be a part of the change? Join today!</small>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  console.log("✅ script.js is working!");
+
+  // Grab the toggle button
+  const langBtn = document.getElementById('langBtn');
+
+  // Track current language
+  let isEnglish = true;
+
+  // ... rest of your code ...
+
+
+  // Text content for different languages
+  const content = {
+    english: {
+      heading: "The Change We Want To See",
+      about: `
+        <div><strong>About Kevin:</strong><br>
+          Moved to Memphis at the age of 8, Memphis has become his hometown.<br>
+          Growing up in the Douglass Neighborhood, Kevin saw firsthand the struggles of many Memphis citizens.<br>
+          After graduating from Douglass High School, Kevin went to the University of Memphis, where he graduated
+          with a Bachelor of Arts in Criminal Justice.
+        </div>
+        <div>
+          With this degree and his long experience with the poverty surrounding his neighborhood, Kevin understood
+          that Memphis needed POVERTY ERADICATION. He has now made it his mission to help the city that gave him so
+          much. Although young he knows the importance of the Memphis culture while maintaining the need to protect
+          the city's citizens.
+        </div>
+      `,
+      points: {
+        education: ["Education", [
+          "Provide the proper funding to have buildings up to date.",
+          "Make it a priority to listen to the voices of principals and teachers who can speak on the needs of students.",
+          "EQUAL OPPORTUNITY FOR ALL. Students should have the same opportunities as others to ensure everyone has a fair chance to succeed.",
+          "Partner up with businesses to hire high school and college graduates."
+        ]],
+        taxes: ["Taxes", [
+          "It is a goal to lower property taxes for local business as they are the backbone of the city.",
+          "Increase property taxes on big corporations that have received tax breaks.",
+          "Lower the taxes on license plates and renewals.",
+          "Ensure property value is considerate of expenses on houses"
+        ]],
+        health: ["Health", [
+          "Provide easy access to health care and urgent care through transportation.",
+          "Ensure everyone has an opportunity to receive urgent care without making it high cost.",
+          "Have monthly free clinic check ups at community centers for community residents"
+        ]],
+        safety: ["Safety", [
+          "Move police to a community based policing. Officers should be respected not feared.",
+          "Officers should receive proper training to help its citizens.",
+          "Provide proper funding to jails to ensure they run smoothly.",
+          "Ensure the safety of immigrants that have helped this city out. We must target crime, not the innocent."
+        ]]
+      },
+      footer: {
+        donateText: "Do these points align with yours? Consider supporting my work!",
+        donateButton: "Donate",
+        donateThanks: "Every little bit helps keep this project alive. Thank you!",
+        registerButton: "Register",
+        registerText: "Would you like to be a part of the change? Join today!"
+      }
+    },
+    spanish: {
+      heading: "El Cambio Que Queremos Ver",
+      about: `
+        <div><strong>Sobre Kevin:</strong><br>
+          Se mudó a Memphis a los 8 años; Memphis se ha convertido en su hogar.<br>
+          Creció en el vecindario Douglass, donde presenció de primera mano las luchas de muchos ciudadanos de Memphis.<br>
+          Después de graduarse de la Douglass High School, Kevin asistió a la Universidad de Memphis, donde obtuvo
+          una licenciatura en Justicia Criminal.
+        </div>
+        <div>
+          Con este título y su experiencia con la pobreza en su comunidad, Kevin entendió que Memphis necesitaba
+          LA ERRADICACIÓN DE LA POBREZA. Ahora ha convertido esto en su misión para ayudar a la ciudad que tanto le dio.
+          Aunque joven, comprende la importancia de la cultura de Memphis junto con la necesidad de proteger a sus ciudadanos.
+        </div>
+      `,
+      points: {
+        education: ["Educación", [
+          "Proporcionar la financiación adecuada para tener edificios actualizados.",
+          "Dar prioridad a escuchar las voces de los directores y maestros que pueden hablar sobre las necesidades de los estudiantes.",
+          "IGUALDAD DE OPORTUNIDADES PARA TODOS. Los estudiantes deben tener las mismas oportunidades que otros para asegurar que todos tengan una oportunidad justa de triunfar.",
+          "Asociarse con empresas para contratar a graduados de secundaria y universidad."
+        ]],
+        taxes: ["Impuestos", [
+          "El objetivo es reducir los impuestos a la propiedad para los negocios locales ya que son ellos quienes mantienen en pie a la ciudad.",
+          "Aumentar los impuestos a las grandes corporaciones que han recibido exenciones fiscales.",
+          "Reducir los impuestos sobre placas y renovaciones.",
+          "Asegurar que el valor de la propiedad sea considerado en relación con los gastos de las casas."
+        ]],
+        health: ["Salud", [
+          "Proporcionar fácil acceso a atención médica y atención urgente mediante transporte.",
+          "Garantizar que todos tengan la oportunidad de recibir atención urgente sin altos costos.",
+          "Realizar chequeos mensuales gratuitos en centros comunitarios para los residentes de la comunidad."
+        ]],
+        safety: ["Seguridad", [
+          "Mover a la policía hacia un modelo de vigilancia comunitaria. Los oficiales deben ser respetados, no temidos.",
+          "Los oficiales deben recibir la capacitación adecuada para ayudar a los ciudadanos.",
+          "Proporcionar la financiación adecuada a las cárceles para asegurar que funcionen sin problemas.",
+          "Garantizar la seguridad de los inmigrantes que han ayudado a esta ciudad. Debemos combatir el crimen, no a los inocentes."
+        ]]
+      },
+      footer: {
+        donateText: "¿Estos puntos se alinean con los tuyos? ¡Considera apoyar mi trabajo!",
+        donateButton: "Donar",
+        donateThanks: "Cada contribución ayuda a mantener vivo este proyecto. ¡Gracias!",
+        registerButton: "Regístrate",
+        registerText: "¿Te gustaría ser parte del cambio? ¡Únete hoy!"
+      }
+    }
+  };
+
+  // Helper function to render list items
+  function createListHtml(items) {
+    return items.map(item => `<li>${item}</li>`).join("");
+  }
+
+  // Toggle language on button click
+  langBtn.addEventListener("click", () => {
+    isEnglish = !isEnglish;
+
+    const lang = isEnglish ? "english" : "spanish";
+
+    // Update main text
+    document.querySelector("h1").textContent = content[lang].heading;
+    document.querySelector(".text1").innerHTML = content[lang].about;
+
+    // Update each point section
+    const pointDivs = document.querySelectorAll(".point");
+    const topics = ["education", "taxes", "health", "safety"];
+    topics.forEach((topic, index) => {
+      const [title, items] = content[lang].points[topic];
+      pointDivs[index].querySelector(".point_title").textContent = title;
+      pointDivs[index].querySelector("ul").innerHTML = createListHtml(items);
+    });
+
+    // Update donate button and text
+    document.getElementById("donate-btn").textContent = content[lang].footer.donateButton;
+    document.getElementById("donate-btn").href = isEnglish
+      ? "https://forms.gle/7GutQ6i7VLvvASJf8"
+      : "https://forms.gle/SLZTrR3tcGHPRiMx5";
+    document.querySelector("#donate-footer small").textContent = content[lang].footer.donateThanks;
+    document.querySelector("#donate-footer p").textContent = content[lang].footer.donateText;
+
+    // Update register button and text
+    document.getElementById("register-btn").textContent = content[lang].footer.registerButton;
+    document.getElementById("register-btn").href = isEnglish
+      ? "https://forms.gle/Wc3p7STRvWY2K3FK6"
+      : "https://forms.gle/Q5NaLw8urreuy1439";
+    document.getElementById("register-msg").textContent = content[lang].footer.registerText;
+
+    // Update toggle button label
+    langBtn.textContent = isEnglish ? "Español" : "English";
+  });
+});
+</script>
